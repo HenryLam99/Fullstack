@@ -1,0 +1,10 @@
+<?php session_start();
+include_once("database.php");
+$host = "localhost";
+$user = "root";
+$pass = "";
+$name = "web_app";
+$title_web="InstaKilogram";
+define("domain", "http://localhost/webapp/"); 
+define("domain_admin", "http://localhost/webapp/admin/"); 
+$connect = DBconnect($host,$user, $pass, $name);
