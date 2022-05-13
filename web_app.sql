@@ -27,7 +27,7 @@ CREATE TABLE `post_new` (
   `status` int(1) NOT NULL,
   `time` date NOT NULL DEFAULT current_timestamp(),
   `description` text NOT NULL,
-  `id_user` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL,
   `image_post` varchar(220) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -81,4 +81,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-12 18:26:22
+-- Dump completed on 2022-05-13 22:04:34

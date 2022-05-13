@@ -47,7 +47,7 @@ include_once("../config/config.php");
                 </thead>
                 <tbody>
                   <?php 
-                     $sql = "SELECT * FROM `post_new` where id_user = ".$_GET["id"].";";
+                     $sql = "SELECT * FROM `post_new` where user_id = ".$_GET["id"].";";
                      $query_post = query($sql,$connect); 
                      foreach($query_post as $key_post){
                   ?>
@@ -58,9 +58,9 @@ include_once("../config/config.php");
                     <?php if($key_post["status"] == 1){
                       echo "Public";
                     }elseif($key_post["status"] == 2){
-                      echo "Friends";
+                      echo "Internal";
                     }elseif($key_post["status"] == 3){
-                      echo "Only me";
+                      echo "Private";
                     }
                     ?>
                     </td>

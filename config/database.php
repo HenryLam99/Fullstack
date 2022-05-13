@@ -13,7 +13,8 @@
     	}
             
     } 
- 
+  
+
     function query($sql,$con)
     {
     	
@@ -35,6 +36,11 @@
     	}
         	
         destruct($con);
+    }
+	function query_rows($sql,$con)
+    { 
+		$result = mysqli_query($con,$sql);
+    	return mysqli_num_rows($result);  
     }
  
     function destruct($con){
